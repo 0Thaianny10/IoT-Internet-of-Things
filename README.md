@@ -1,18 +1,18 @@
-void setup() {
-  // put your setup code here, to run once:
-pinMode(13, OUTPUT);
+void setup() {<br>
+  // put your setup code here, to run once:<br>
+pinMode(13, OUTPUT);<br>
 
-}
+}<br>
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  // ligar a saída 13
-digitalWrite (13, HIGH);
-// Aguardar 1,5 segundo
-delay(1500);
-// desligar a saída 13
-digitalWrite(13,LOW);
-// Aguardar 0,5 segundo
-delay(500);
+void loop() {<br>
+  // put your main code here, to run repeatedly:<br>
+  // ligar a saída 13<br>
+digitalWrite (13, HIGH);<br>
+// Aguardar 1,5 segundo<br>
+delay(1500);<br>
+// desligar a saída 13<br>
+digitalWrite(13,LOW);<br>
+// Aguardar 0,5 segundo<br>
+delay(500);<br>
 
 }
