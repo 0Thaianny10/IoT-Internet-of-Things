@@ -1,0 +1,27 @@
+\\ aqui nos criamos o ínicio de um semáfaro, porém com um botão de start.
+int buttonState = 0;
+void setup()
+{
+  pinMode(1, OUTPUT);
+  pinMode(10, INPUT);
+}
+
+void loop()
+{
+  buttonState = digitalRead(10);
+  if( buttonState == HIGH){
+    digitalWrite(11, HIGH);
+    	delay(3000);
+    digitalWrite (11, LOW);
+    	delay(1000);
+    digitalWrite(12, HIGH);
+    	delay(2000);
+    digitalWrite (12, LOW);
+    	delay(1000);
+    digitalWrite(13, HIGH);
+    	delay(1000);
+    digitalWrite (13, LOW);
+    	delay(1000);
+  } 
+  
+}
