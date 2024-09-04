@@ -1,0 +1,20 @@
+// 
+//
+void setup()
+{
+  Serial.begin(9600);
+  // estabelece a ligação
+}
+
+void loop()
+{
+  for ( int digitalInput=0; digitalInput<255; digitalInput++)
+  {
+\\ for laço de repetição, caso seja menor que 255, acrescenta mais
+    Serial.print("Digital Input:"); \\ apresenta texto
+    Serial.println(digitalInput);
+    analogWrite(11, digitalInput); \\ Osciloscópio
+    analogWrite(9, digitalInput); \\ multímetro
+    analogWrite(6, digitalInput); \\ resistor do led
+  }  
+}
