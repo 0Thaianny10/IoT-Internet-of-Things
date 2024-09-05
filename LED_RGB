@@ -1,0 +1,32 @@
+#define R 3
+#define G 6
+#define B 5
+
+void setup()
+{ 
+ Serial.begin(9600); // estabelece a ligação
+ 
+ pinMode (R, OUTPUT); //configuração dos pinos de saída
+ pinMode (G, OUTPUT);
+ pinMode (B, OUTPUT);
+}
+
+void loop()
+{
+analogWrite (R, 200); // ligando as portas PWM com valores aleatórios
+analogWrite (G, 0);
+analogWrite (B, 0);
+Serial.println("This Color is Red:");
+
+delay(500); // Espera 200ms até atualizar o LED com novos valores
+analogWrite (R, 0); 
+analogWrite (G, 200);
+analogWrite (B, 0);
+Serial.println("This Color is Green:");
+delay(500); 
+analogWrite (R, 0); 
+analogWrite (G, 0);
+analogWrite (B, 200);
+Serial.println("This Color is Blue:");
+delay(500); 
+}
