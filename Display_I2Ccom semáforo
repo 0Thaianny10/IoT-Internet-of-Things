@@ -1,0 +1,57 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+#define endereco  0x20 // Endereços comuns: 0x20, 0x3F
+#define colunas   16
+#define linhas    2
+LiquidCrystal_I2C lcd(endereco, colunas, linhas);
+
+
+void setup()
+{
+pinMode(5, OUTPUT);
+lcd.init(); // INICIA A COMUNICAÇÃO COM O DISPLAY
+lcd.backlight(); // LIGA A ILUMINAÇÃO DO DISPLAY
+lcd.clear(); // LIMPA O DISPLAY
+
+
+}
+
+void loop()
+{
+  digitalWrite(5, HIGH);
+  lcd.setCursor(1, 1);
+  lcd.print("ON RED");
+  delay(2000); // Wait for 1000 millisecond(s)
+  digitalWrite(5, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+  
+
+  digitalWrite(6, HIGH);
+  lcd.setCursor(1, 1);
+  lcd.print("ON YELLOW");
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(6, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+  pinMode(7, OUTPUT);
+
+  digitalWrite(7, HIGH);
+  lcd.setCursor(1, 1);
+  lcd.print("ON GREEN");
+  delay(3000); // Wait for 1000 millisecond(s)
+  digitalWrite(7, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+
+  pinMode(8, OUTPUT);
+  digitalWrite(8, HIGH);
+  delay(2000); // Wait for 1000 millisecond(s)
+  digitalWrite(8, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+
+  pinMode(9, OUTPUT);
+  digitalWrite(9, HIGH);
+  delay(3000); // Wait for 1000 millisecond(s)
+  digitalWrite(9, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+
+}
